@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Intro Section -->
+    <section class="container intro">
+      <div class="welcome__section">
+        <h1>Welcome to the Quiz App!</h1>
+        <p>Select a Topic to Begin the Quiz:</p>
+      </div>
+      <div class="card__container">
+        <div class="card">
+          <h3>Film</h3>
+          <button class="start__btn" data-category="Film">Film</button>
+        </div>
+        <div class="card">
+          <h3>Celebrities</h3>
+          <button class="start__btn" data-category="Celebrities">
+            Celebrities
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <div class="quiz hidden">
+      <div id="timer">Time left: <span id="time-left">20</span>s</div>
+      <h2 class="quiz__category"></h2>
+      <div id="question__container"></div>
+      <!-- <button class="next__button">Next Question</button>-->
+    </div>
+
+    <!-- Result Section -->
+    <div class="result hidden">
+      <h2>Quiz Completed!</h2>
+      <p id="score">
+        You answered <span id="correct-answers"></span> out of
+        <span id="total-questions"></span> questions correctly.
+      </p>
+      <p id="time-taken">Time taken: <span id="time-taken"></span> seconds</p>
+      <button onclick="location.reload()">Play Again</button>
+    </div>
+  </body>
+</html>
